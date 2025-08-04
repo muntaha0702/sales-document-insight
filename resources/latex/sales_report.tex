@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+
+% Setting up the page geometry
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Including essential packages for tables and formatting
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{siunitx} % For formatting numbers
+\usepackage{amsmath}
+\usepackage{pdflscape} % For landscape tables
+\usepackage{noto} % Using Noto font for compatibility
+
+% Configuring the font
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{noto}
+
+% Defining document title and headers
+\title{Sales Visualization Report}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+This report presents the sales performance metrics for the specified period, region, and categories. Below are the key performance indicators (KPIs), insights, and detailed data breakdowns.
+
+\section{Key Performance Indicators}
+\begin{itemize}
+    \item \textbf{Total Revenue}: \$\num{%.2f|totalRevenue}
+    \item \textbf{Average Revenue per Transaction}: \$\num{%.2f|avgRevenue}
+    \item \textbf{Total Units Sold}: \num{%d|totalUnitsSold}
+\end{itemize}
+
+\section{Insights}
+\begin{itemize}
+    \item \textbf{Top Products}: %s|insights.top_products
+    \item \textbf{Return Anomalies}: %s|insights.return_anomalies
+    \item \textbf{Seasonal Trend}: %s|insights.seasonal_trend
+\end{itemize}
+
+\section{Revenue by Product}
+\begin{landscape}
+\begin{table}[h]
+\centering
+\caption{Revenue, Returns, and Quantity by Product}
+\begin{tabular}{l S[table-format=10.2] S[table-format=10.2] S[table-format=10.0]}
+\toprule
+\textbf{Product Name} & \textbf{Total Revenue (\$)} & \textbf{Total Returns} & \textbf{Total Quantity} \\
+\midrule
+%rows|revenueByProduct
+%s|product_name & \num{%.2f|total_revenue} & \num{%.2f|total_returns} & \num{%d|total_quantity} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+\section{Revenue by Category}
+\begin{table}[h]
+\centering
+\caption{Revenue by Category}
+\begin{tabular}{l S[table-format=10.2]}
+\toprule
+\textbf{Category} & \textbf{Total Revenue (\$)} \\
+\midrule
+%rows|revenueByCategory
+%s|category & \num{%.2f|total_revenue} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Revenue by Region}
+\begin{table}[h]
+\centering
+\caption{Revenue by Region}
+\begin{tabular}{l S[table-format=10.2]}
+\toprule
+\textbf{Region} & \textbf{Total Revenue (\$)} \\
+\midrule
+%rows|revenueByRegion
+%s|region & \num{%.2f|total_revenue} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Revenue by Store}
+\begin{table}[h]
+\centering
+\caption{Revenue by Store}
+\begin{tabular}{l S[table-format=10.2]}
+\toprule
+\textbf{Store ID} & \textbf{Total Revenue (\$)} \\
+\midrule
+%rows|revenueByStore
+%s|store_id & \num{%.2f|total_revenue} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Return Rates by Product}
+\begin{table}[h]
+\centering
+\caption{Return Rates by Product}
+\begin{tabular}{l S[table-format=10.2]}
+\toprule
+\textbf{Product Name} & \textbf{Return Rate (\%)} \\
+\midrule
+%rows|returnRates
+%s|product_name & \num{%.2f|return_rate} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Monthly Revenue Trend}
+\begin{table}[h]
+\centering
+\caption{Revenue by Month}
+\begin{tabular}{l S[table-format=10.2]}
+\toprule
+\textbf{Month} & \textbf{Total Revenue (\$)} \\
+\midrule
+%rows|monthlyRevenue
+%s|month & \num{%.2f|total_revenue} \\
+%endrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
