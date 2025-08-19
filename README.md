@@ -1,66 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sales Document Insight Web App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel-based web application that processes sales data from CSV files, provides detailed visualizations, and generates downloadable PDF sales reports. This project demonstrates skills in data handling, database operations, frontend visualization, and PDF generation.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **CSV Upload & Validation**  
+  Upload sales data via CSV with validation for required columns such as transaction ID, date, product name, quantity, unit price, and revenue.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Data Import & Storage**  
+  Imported sales data is stored securely in a MySQL database with transaction-safe batch inserts.
 
-## Learning Laravel
+- **Dynamic Sales Dashboard**  
+  - Filter sales data by date range, region, and product categories  
+  - Visualize key performance indicators (KPIs) such as total revenue, average revenue, total units sold, return rates, and customer purchase frequency  
+  - Chart.js-powered interactive charts for product revenue, category revenue, regional distribution, monthly trends, and more
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Anomaly Detection & AI Insights**  
+  Detects unusual return rates and identifies top products and seasonal sales trends using statistical methods and custom algorithms.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **PDF Export**  
+  Generate comprehensive sales reports in PDF format, including all selected filters and visualized data.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Screenshots
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 1. CSV Upload Page
+![WhatsApp Image 2025-08-20 at 01 43 16_6bf8cf5c](https://github.com/user-attachments/assets/8f5e20eb-10b0-4f2e-8f89-4970254ac7ea)
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+### 2. Sales Dashboard with Filters
+![WhatsApp Image 2025-08-20 at 01 44 05_c457e47f](https://github.com/user-attachments/assets/4d4cdbf2-8715-4b22-8add-99c552bf3140)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 3. Sales Revenue Visualizations
+![WhatsApp Image 2025-08-20 at 01 44 20_10ebe2dc](https://github.com/user-attachments/assets/434cf11c-225c-466a-a6c0-0c2361c9107b)
+![WhatsApp Image 2025-08-20 at 01 44 36_08f679d9](https://github.com/user-attachments/assets/13f0f105-7201-496a-91f9-e52230c27bcf)
+![WhatsApp Image 2025-08-20 at 01 44 52_85d84d2a](https://github.com/user-attachments/assets/32f0c729-d9fb-4436-9cd0-54d7c8ebbfb0)
+![WhatsApp Image 2025-08-20 at 01 45 08_58559183](https://github.com/user-attachments/assets/d8492198-ac35-4c8f-9ff2-b3f4c7eb0c7f)
+![WhatsApp Image 2025-08-20 at 01 45 21_6e420320](https://github.com/user-attachments/assets/d085900f-df65-46bc-9ef1-c5c68580d821)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+---
+
+## How Revenue is Calculated
+
+- **Total Revenue:** Sum of the `revenue` column for all filtered sales records.
+- **Revenue by Product/Category/Region/Store:** Aggregated sums of `revenue` grouped by the respective dimension.
+- **Average Revenue:** Average of the `revenue` values over the filtered dataset.
+- **Returns:** Calculated as the sum of returned units per product; return rates are computed as `(sum of returns / sum of quantity) * 100`.
+- **Monthly Revenue:** Grouped sum of `revenue` by year-month from the `date` field to track trends over time.
+
+These calculations are performed efficiently with Laravel Eloquent query builder, executing optimized SQL queries.
+
+---
+
+## Usage
+
+- Navigate to the **Upload CSV** page to import sales data files.
+- After successful import, access the **Sales Dashboard**.
+- Use filters to customize the date range, region, and categories.
+- Visualize data through interactive charts and insights.
+- Click the **Download PDF** button to download a report with current filter settings.
+
+---
+
+## Technologies Used
+
+- Laravel Framework  
+- Spatie SimpleExcel (CSV reading)  
+- Maatwebsite Excel (optional for import)  
+- Chart.js (data visualization)  
+- DomPDF (PDF generation)  
+- MySQL  (database)  
+- Blade Templating Engine
+
+---
